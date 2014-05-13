@@ -546,6 +546,91 @@ public class CreatePlaces {
         wildForest_ForeignVillage.buildGates();
         
         
+        // ------------ ForeignVillage ------------ \\
+        int[][] foreignVillageBoundaries = new int[][]{
+          { 33, 53, 33, 51 }, 
+          { 33, 51, 31, 49 }, 
+          { 31, 49, 17, 49 }, 
+          { 17, 49, 17, 24 },
+          { 17, 24, 23, 18 }, 
+          { 23, 18, 30, 18 },
+          { 30, 18, 33, 21 }, 
+          { 33, 21, 35, 21 }, 
+          { 35, 21, 35, 17 }, 
+          { 37, 17, 37, 21 },
+          { 37, 21, 45, 21 }, 
+          { 45, 21, 45, 25 },
+          { 45, 25, 48, 25 }, 
+          { 48, 25, 48, 21 }, 
+          { 48, 21, 50, 21 }, 
+          { 50, 21, 53, 24 },
+          { 53, 24, 53, 49 }, 
+          { 53, 49, 48, 49 },
+          { 48, 49, 48, 47 }, 
+          { 48, 47, 46, 47 }, 
+          { 46, 47, 46, 49 }, 
+          { 46, 49, 39, 49 },
+          { 39, 49, 37, 51 }, 
+          { 37, 51, 37, 53 },
+            
+          { 48, 28, 51, 28 }, 
+          { 51, 28, 51, 32 }, 
+          { 51, 32, 48, 32 }, 
+          { 48, 28, 48, 32 },
+            
+          { 42, 28, 45, 28 }, 
+          { 45, 28, 45, 32 },
+          { 45, 32, 42, 23 }, 
+          { 42, 32, 42, 28 }, 
+            
+          { 48, 36, 51, 36 }, 
+          { 51, 36, 51, 40 },
+          { 51, 40, 48, 40 }, 
+          { 48, 40, 48, 36 },
+            
+          { 42, 36, 45, 36 }, 
+          { 45, 36, 45, 40 },
+          { 45, 40, 42, 40 }, 
+          { 42, 40, 42, 36 },
+            
+          { 27, 28, 30, 28 }, 
+          { 30, 28, 30, 32 },
+          { 30, 32, 27, 32 }, 
+          { 27, 32, 27, 28 },
+            
+          { 21, 28, 24, 28 }, 
+          { 24, 28, 24, 32 },
+          { 24, 32, 21, 32 }, 
+          { 21, 32, 21, 28 },
+            
+          { 27, 36, 30, 36 }, 
+          { 30, 36, 30, 40 },
+          { 30, 40, 27, 40 }, 
+          { 27, 40, 27, 36 },
+            
+          { 21, 36, 24, 36 }, 
+          { 24, 36, 24, 40 },
+          { 24, 40, 21, 40 }, 
+          { 21, 40, 21, 36 },
+        };
+        foreignVillage.loadBoundaryPoints(foreignVillageBoundaries);
+        // gates
+        int[][] foreignVillageGates = new int[][]{
+          //{ 35, 17, 37, 17 },
+          //{ 37, 53, 33, 53 }
+        };
+        
+        // spawn points
+//        foreignVillage.loadSpawnPoint(-2190, -1070);
+        int [] foreignVillageToWildForest_ForeignVillageEndPoint = new int[] { //this variable is dumb and I'm sorry ;_;
+              -2055, -830
+        };
+        // build gates
+        foreignVillage.loadGatePoints(foreignVillageGates);
+        foreignVillage.loadGates(wildForest_ForeignVillage, foreignVillageToWildForest_ForeignVillageEndPoint);
+        foreignVillage.buildGates();
+        
+        
         //for future reference:
 //        { 0, 0, 0, 0 },
 //          { 0, 0, 0, 0 },
