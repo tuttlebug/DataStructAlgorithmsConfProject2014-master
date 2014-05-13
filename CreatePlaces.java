@@ -415,12 +415,38 @@ public class CreatePlaces {
          
         // ------------ EndBridge ------------ \\
         int[][] endBridgeBoundaries = new int[][]{
-          
+          { 34, 36, 34, 32 },
+          { 34, 32, 17, 32 }, 
+          { 17, 32, 17, 28 }, 
+          { 17, 28, 20, 25 }, 
+          { 20, 25, 25, 25 },
+          { 25, 25, 25, 24 }, 
+          { 25, 24, 29, 24 },
+          { 29, 24, 29, 23 }, 
+          { 29, 23, 31, 23 }, 
+          { 31, 23, 31, 21 }, 
+          { 31, 21, 32, 21 },
+          { 32, 21, 32, 19 }, 
+          { 32, 19, 34, 17 },
+          { 36, 17, 38, 19 }, 
+          { 38, 19, 38, 21 }, 
+          { 38, 21, 39, 21 },
+          { 39, 21, 39, 23 }, 
+          { 39, 23, 41, 23 },
+          { 41, 23, 41, 24 }, 
+          { 41, 24, 45, 24 }, 
+          { 45, 24, 45, 25 }, 
+          { 45, 25, 50, 25 },
+          { 50, 25, 53, 28 }, 
+          { 53, 28, 53, 32 },
+          { 53, 32, 36, 32 }, 
+          { 36, 32, 36, 36 }
         };
         endBridge.loadBoundaryPoints(endBridgeBoundaries);
         // gates
         int[][] endBridgeGates = new int[][]{
-          //{ 35, 44, 38, 44 }
+          //{ 34, 36, 36, 36 }, //Do these still need to be here? 
+          //{ 34, 17, 36, 17 }
         };
         
         // spawn points
@@ -432,6 +458,92 @@ public class CreatePlaces {
         endBridge.loadGatePoints(endBridgeGates);
         endBridge.loadGates(bridge, caveToForestVillageEndPoint); //not sure about this line?
         cave.buildGates();
+        
+        // ------------ WildForest_ForeignVillage ------------ \\
+        int[][] wildForest_ForeignVillageBoundaries = new int[][]{
+          { 35, 52, 35, 50 }, 
+          { 35, 50, 33, 50 }, 
+          { 33, 50, 33, 47 }, 
+          { 33, 47, 32, 46 },
+          { 32, 46, 28, 46 }, 
+          { 28, 46, 28, 49 },
+          { 28, 49, 20, 49 }, 
+          { 20, 49, 20, 24 }, 
+          { 20, 24, 25, 24 }, 
+          { 25, 24, 25, 30 },
+          { 25, 30, 22, 30 }, 
+          { 22, 30, 22, 38 },
+          { 22, 38, 29, 38 }, 
+          { 29, 38, 29, 28 }, 
+          { 29, 28, 35, 28 }, 
+          { 35, 28, 35, 32 },
+          { 35, 32, 40, 32 }, 
+          { 40, 32, 40, 23 },
+          { 40, 23, 43, 23 }, 
+          { 43, 23, 43, 21 }, 
+          { 43, 21, 35, 21 }, 
+          { 35, 21, 35, 16 },
+          { 37, 16, 37, 19 }, 
+          { 37, 19, 41, 19 },
+          { 41, 19, 41, 18 }, 
+          { 41, 18, 47, 18 }, 
+          { 47, 18, 47, 21 }, 
+          { 47, 21, 45, 21 },
+          { 45, 21, 45, 23 }, 
+          { 45, 23, 48, 23 },
+          { 48, 23, 48, 30 }, 
+          { 48, 30, 50, 30 }, 
+          { 50, 30, 50, 34 }, 
+          { 50, 34, 44, 34 },
+          { 44, 34, 44, 30 }, 
+          { 44, 30, 46, 30 },
+          { 46, 30, 46, 25 }, 
+          { 46, 25, 42, 25 }, 
+          { 42, 25, 42, 37 }, 
+          { 42, 37, 50, 37 },
+          { 50, 37, 50, 43 }, 
+          { 50, 43, 48, 43 },
+          { 48, 43, 48, 39 }, 
+          { 48, 39, 46, 39 }, 
+          { 46, 39, 46, 41 }, 
+          { 46, 41, 45, 41 },
+          { 45, 41, 45, 44 }, 
+          { 45, 44, 39, 44 },
+          { 39, 44, 39, 50 }, 
+          { 39, 50, 37, 50 }, 
+          { 37, 50, 37, 52 }, 
+            
+          { 44, 38, 44, 40 },
+          { 44, 40, 43, 40 }, 
+          { 43, 40, 43, 42 },
+          { 43, 42, 34, 42 }, 
+          { 34, 42, 32, 44 }, 
+          { 32, 44, 26, 44 }, 
+          { 26, 44, 26, 47 },
+          { 26, 47, 22, 47 }, 
+          { 22, 47, 22, 40 },
+          { 22, 40, 29, 40 }, 
+          { 29, 40, 35, 34 }, 
+          { 35, 34, 40, 34 }, 
+          { 40, 34, 40, 38 },
+          { 40, 38, 44, 38 }
+        };
+        wildForest_ForeignVillage.loadBoundaryPoints(wildForest_ForeignVillageBoundaries);
+        // gates
+        int[][] wildForest_ForeignVillageGates = new int[][]{
+          //{ 35, 16, 37, 16 },
+          //{ 35, 52, 37, 52 }
+        };
+        
+        // spawn points
+//        wildForest_ForeignVillage.loadSpawnPoint(-2190, -1070);
+        int [] wildForest_ForeignVillageToEndBridgeEndPoint = new int[] {
+              -2055, -830
+        };
+        // build gates
+        wildForest_ForeignVillage.loadGatePoints(wildForest_ForeignVillageGates);
+        wildForest_ForeignVillage.loadGates(endBridge, wildForest_ForeignVillageToEndBridgeEndPoint);
+        wildForest_ForeignVillage.buildGates();
         
         
         //for future reference:
